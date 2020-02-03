@@ -1,498 +1,660 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
- <link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script> 
- 
- <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.2/paper/bootstrap.css" rel="stylesheet"/> -->
- <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script> -->
- <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet"/> -->
- 
   
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script> 
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
  
- 
- <meta name="viewport" content="width=device-width, initial-scale=0.8">
- <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
- <style>
- body {
-      font-family: Arial, Helvetica, sans-serif;
-      color:black;
-      -webkit-print-color-adjust: exact;
-      /*height: 100%;*/
-      /*min-height: 100vh;*/
-       }
- 
- *   {
-      box-sizing: border-box;
-     }
-      
-    input:focus, select:focus
-    {
-    outline:0px !important;
-    -webkit-appearance:none;
-    box-shadow: none !important;
-     }
- 
-   input[type=text], select{
-   width: 100%;
-   height: 50px;
-   padding: 12px;
-   /*border-radius:5px;*/
-   border: .5px solid #ccc;
-   margin-top: 0px;
-   margin-bottom: 0px;
-   resize: vertical;
-    /*resize: horizontal;*/
-   text-align: center; 
-   outline: none;
-   font-weight: bold;
-   
- }
- 
- input[type=submit] {
-   background-color: #4CAF50;
-   color: white;
-   padding: 12px 20px;
-   border: none;
-   cursor: pointer;
-   outline: none;
- }
- 
- input[type=submit]:hover {
-   background-color: #45a049;
- }
- 
- 
- /* Style the container/contact section */
- .container {
-    
-  
-   background-color: #f2f2f2 !important;
-   max-width: 610px;
-   outline: none;
-   display: flex;
-   flex-direction: column;
-   
- }
- 
- /* Create two columns that float next to eachother */
- .column {
-   
-   width: 73%;
-   left:14%;
-   
-   position: relative;
-   margin-top: 15px;
-   padding: 20px;
-   
- }
- 
- /* Clear floats after the columns */
- .row:after {
-   content: "";
-   display: table;
-   clear: both;
- }
- 
- #text1
- {
-   background-color: red !important;
-   font-size: 20px;
-   outline: none;
-   text-align: center;
-   
-   color:white !important;
-   }
-   #text2{
-   font-size:20px;
-   height: 75px;
-   
- }
- 
-   
-   #text3
- {  font-size: 20px;
-   outline: none;
- height: 40px;
-   }
-   #text4
- {  font-size: 13px;
-   outline: none;
- height: 40px;
-   }
- 
- .input-placeholder input:valid + .placeholder {
-   display: none;
- }
- .input-placeholder2 input:valid + .placeholder2 {
-   display: none;
- }
- .input-placeholder3 input:valid + .placeholder3 {
-   display: none;
- }
- 
- .placeholder {
-   position: absolute;
-   pointer-events: none;
-   font-size:20px;
-   
-   top: 95px;
-   
-   left: 165px;
-    
-   width:335px;
-   margin: auto;
-   color: black;
-   font-family:arial;
-   font-weight:bold;
- }
- .placeholder span {
-   color: #656565;
-   font-weight:normal;
-   font-size:14px;
-  
- }
- 
- 
- 
- 
- .special {
-   /* font-weight: bold !important; */
-   color: black !important;
-   line-height:30px;
-  text-indent: 28%;
-  
- }
- 
- 
- .placeholder2 {
-   position: absolute;
-   pointer-events: none;
-   font-size:20px;
-   top: 152;
-   
-   left: 180px;
-  
-   width:335px;
-   margin: auto;
-   color: black;
-   font-family:arial;
-   font-weight:bold;
- }
- .placeholder2 span {
-   color: #656565;
-   font-weight:normal;
-   font-size:14px;
- }
- .change1::-webkit-input-placeholder {
-     /* WebKit, Blink, Edge */
-     color: white !important;
-     font-size:20px;
-     position: relative;
-     top:4px;
+ <!-- date picker***** -->
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"/> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=0.8">
+
+<style>
+body {
+     font-family: Arial, Helvetica, sans-serif;
+     color:black;
+     -webkit-print-color-adjust: exact;
      
- }
- 
- 
- #print {
-   background: none;
-  
-   
-   font: inherit;
-   height:25px;
-   line-height: 2;
-   
-   border-radius: 5px;
-   outline: none;
- }
- .raise:hover,
- .raise:focus {
-   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-   transform: translateY(-0.25em);
-   box-shadow: inset 0px 2px 3px -1px white, inset 0px 0px 50px gray;
-   color: white;
- }
- .placeholder3 {
-   position: absolute;
-   pointer-events: none;
-   font-size:12px;
-  
-   top: 232px;
-   
-   left: 80px;
-  
-   width:335px;
-   margin: auto;
-   color:#656565;
-   font-family:arial;
-   
- }
- .bootstrap-select .dropdown-toggle:focus {
-     outline: none !important;
-     text-indent: 38%;
- }
- .bootstrap-select .dropdown-toggle {
-     outline: none !important;
-     border-radius: 0px;
-     text-indent: 38%;
-      font-weight: bold;
- }
- .bootstrap-select .dropdown-toggle .caret {
-   
-   display: block;
- }
- @media print{
-   .bootstrap-select .dropdown-toggle .caret{
-        display:none;
+      }
+
+*   {
+     box-sizing: border-box;
     }
- }
- 
- /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
- @media screen and (max-width: 500px) {
-  .container .col-25, .col-75, input[type=submit], #textarea{
-     width: 100%;
-     margin-top: 0;
-   }
- }
- 
- @media screen and (max-width: 570px) {
-   .placeholder3{
-     display: block;
-     left:20px;
-     top:250px;
-   width:240px;
-   text-align: center;
-   
-   
-   }
- }
- @media screen and (max-width: 570px) {
-   .placeholder2 {
-     display: block;
-     left:150px;
-     top: 155;
-   
-   
-   }
- }
- @media screen and (max-width: 570px) {
-   .placeholder1 {
-     display: block;
-     left:200px;
-     top: 95px;
+     
+   input:focus, select:focus
+   {
+   outline:0px !important;
+   -webkit-appearance:none !important;
+   box-shadow: none !important;
+    }
+    input:focus{
+  border: transparent;
+}
+  input[type=text], select{
+  width: 100%;
+  height: 50px;
+  padding: 12px;
+  /*border-radius:5px;*/
+  border: .5px solid #ccc;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  resize: vertical;
+   /*resize: horizontal;*/
+  text-align: center; 
+  outline: none;
+  /* font-weight: bold; */
   
+}
+
+
+
+/* Style the container/contact section */
+.container {
    
+ 
+  background-color: #f2f2f2 !important;
+  max-width: 610px;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  
+}
+label{margin-left: 20px;}
+#datepicker{width:180px; margin: 0 20px 20px 20px;}
+#datepicker > span:hover{cursor: pointer;}
+/* Create two columns that float next to eachother */
+.column {
+  
+  width: 73%;
+  left:14%;
+  
+  position: relative;
+  margin-top: 15px;
+  padding: 20px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#text1
+{
+  background-color: red !important;
+  font-size: 20px;
+  outline: none;
+  text-align: center;
+  
+  color:white !important;
+  }
+  #text2{
+  font-size:20px;
+  height: 75px;
+  
+}
+
+  
+  #text3
+{  font-size: 20px;
+  outline: none;
+height: 40px;
+  }
+  #text4
+{  font-size: 13px;
+  outline: none;
+height: 40px;
+  }
+
+.input-placeholder input:valid + .placeholder {
+  display: none;
+}
+.input-placeholder2 input:valid + .placeholder2 {
+  display: none;
+}
+.input-placeholder3 input:valid + .placeholder3 {
+  display: none;
+}
+
+.placeholder {
+  position: absolute;
+  pointer-events: none;
+  font-size:20px;
+  
+  top: 95px;
+  
+  left: 165px;
+   
+  width:335px;
+  margin: auto;
+  color:#4B4242;
+  font-family:arial;
+  /* font-weight:bold; */
+}
+.placeholder span {
+  color: #656565;
+  font-weight:normal;
+  font-size:14px;
+ 
+}
+
+
+
+
+.special {
+  /* font-weight: bold !important; */
+  color: black !important;
+  line-height:30px;
+ text-indent: 28%;
+ 
+}
+
+
+.placeholder2 {
+  position: absolute;
+  pointer-events: none;
+  font-size:20px;
+  top: 152;
+  
+  left: 180px;
+ 
+  width:335px;
+  margin: auto;
+  color: #4B4242;
+  font-family:arial;
+  /* font-weight:bold; */
+}
+.placeholder2 span {
+  color:#656565;
+  font-weight:normal;
+  font-size:14px;
+}
+.change1::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: white !important;
+    font-size:20px;
+    position: relative;
+    top:4px;
+    
+}
+
+
+#print {
+  background: none;
+ 
+  
+  font: inherit;
+  height:25px;
+  line-height: 2;
+  
+  border-radius: 5px;
+  outline: none;
+}
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  box-shadow: inset 0px 2px 3px -1px white, inset 0px 0px 50px gray;
+  color: white;
+}
+.placeholder3 {
+  position: absolute;
+  pointer-events: none;
+  font-size:12px;
+ 
+  top: 232px;
+  
+  left: 80px;
+ 
+  width:335px;
+  margin: auto;
+  color:#656565;
+  font-family:arial;
+  
+}
+.bootstrap-select .dropdown-toggle:focus {
+    outline: none !important;
+    text-indent: 38%;
+}
+.bootstrap-select .dropdown-toggle {
+    outline: none !important;
+    border-radius: 0px;
+    text-indent: 38%;
+     /* font-weight: bold; */
+}
+.bootstrap-select .dropdown-toggle .caret {
+  
+  display: block;
+}
+@media print{
+  .bootstrap-select .dropdown-toggle .caret{
+       display:none;
    }
- }
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+ .container .col-25, .col-75, input[type=submit], #textarea{
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .placeholder3{
+    display: block;
+    left:20px;
+    top:250px;
+  width:240px;
+  text-align: center;
+  
+  
+  }
+}
+@media screen and (max-width: 570px) {
+  .placeholder2 {
+    display: block;
+    left:150px;
+    top: 155;
+  
+  
+  }
+}
+@media screen and (max-width: 570px) {
+  .placeholder1 {
+    display: block;
+    left:200px;
+    top: 95px;
+ 
+  
+  }
+}
+@media screen and (max-width: 720px) {
+  .placeholder3{
+    display: block;
+    left:22px;
+    top:246px;
+  width:160px;
+  text-align: center;
+  
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .placeholder2 {
+    display: block;
+    left:60px;
+    top: 155;
+  
+  
+  }
+}
+@media screen and (max-width: 720px) {
+  .placeholder1 {
+    display: block;
+    left:50px;
+    top: 95px;
+ 
+  
+  }
+}
+ 
+ 
+
+
  @media screen and (max-width: 720px) {
-   .placeholder3{
-     display: block;
-     left:22px;
-     top:246px;
-   width:160px;
-   text-align: center;
-   
-   }
- }
- 
- @media screen and (max-width: 720px) {
-   .placeholder2 {
-     display: block;
-     left:60px;
-     top: 155;
-   
-   
-   }
- }
- @media screen and (max-width: 720px) {
-   .placeholder1 {
-     display: block;
-     left:50px;
-     top: 95px;
-  
-   
-   }
- }
-  
-  
- 
+  #print {
+ line-height: 1.8;
+  }
+}   
  
   @media screen and (max-width: 720px) {
-   #print {
-  line-height: 1.8;
-   }
- }   
-  
-   @media screen and (max-width: 720px) {
-    .bootstrap-select .dropdown-toggle {
-  outline: none !important;
-     text-indent: 20%;
-   }
- }   
-  /******/
-  @media screen and (max-width: 500px) {
-   #print {
-     display: block;
-     line-height: 1.5;
-   }
- }
- @media screen and (max-width: 500px) {
-   .placeholder3 {
-     display: block;
-     left:70px;
-     top:230px;
-   width:200px;
-   text-align: center;
-   
-   }
- }
- @media screen and (max-width: 570px) {
-   .placeholder3 {
-     display: block;
-     left:34px;
-     top:225px;
-   width:200px;
-   text-align: center;
-   
-   }
- }
- @media screen and (max-width: 570px) {
-   .placeholder2 {
-     display: block;
-     left:92px;
-     top: 152;
-   
-   
-   }
- }
- @media screen and (max-width: 570px) {
-   .placeholder1 {
-     display: block;
-     left:80px;
-     top: 95px;
-  
-   
-   }
- }
-  @media screen and (max-width: 570px) {
    .bootstrap-select .dropdown-toggle {
-    text-indent: 28%;
-   }
- }  
+ outline: none !important;
+    text-indent: 20%;
+  }
+}   
+ /******/
+ @media screen and (max-width: 500px) {
+  #print {
+    display: block;
+    line-height: 1.5;
+  }
+}
+@media screen and (max-width: 500px) {
+  .placeholder3 {
+    display: block;
+    left:70px;
+    top:230px;
+  width:200px;
+  text-align: center;
+  
+  }
+}
+@media screen and (max-width: 570px) {
+  .placeholder3 {
+    display: block;
+    left:34px;
+    top:225px;
+  width:200px;
+  text-align: center;
+  
+  }
+}
+@media screen and (max-width: 570px) {
+  .placeholder2 {
+    display: block;
+    left:92px;
+    top: 152;
+  
+  
+  }
+}
+@media screen and (max-width: 570px) {
+  .placeholder1 {
+    display: block;
+    left:80px;
+    top: 95px;
  
   
- 
- </style>
- 
- <body >
- 
-   
-                                  <div class="container" >
-                                      
-     <div style="text-align:center">
-     <img src="https://s.hcurvecdn.com/hockeycurve.png" style="position:relative;margin-top:10px;top:5px;width:200px;z-index:4">
-     <div style="position:relative;top:20px;left:0px;font-size:12px;color:black;z-index:4">Scope and Commercials</div> </div>
+  }
+}
+ @media screen and (max-width: 570px) {
+  .bootstrap-select .dropdown-toggle {
+   text-indent: 28%;
+  }
+}  
+
+@media print {
+    #print {
+        display :  none;
+    }
+}
+
+</style>
+
+<body onkeydown="isKeyPressed(event)">
+
+  
+       <div class="container" >
+                                  
+      <!-- <input type="date" name="date" style="position: relative;;top:10px;left:78%;height:20px;width:135px;outline: none;-webkit-appearance: none;box-shadow: none;border: transparent;background: transparent;"> -->
     
-     
-      <div class="row">
-      <div class="column">
-      
-      <!--<div class="input-placeholder">-->
-      <input type="text" id="text1" class="change1"  placeholder="Client"  autocomplete="off" data-lpignore="true"> 
-      <!--</div>-->
-     
- 
-      <div class="input-placeholder">
-      <input type="text" id="text2" required=""  autocomplete="off" data-lpignore="true">
-      <div class="placeholder">2 Bn <span>Impressions</span>
-      </div></div>
-            
-      <div class="input-placeholder2">
-      <input type="text" id="text3" required=""  autocomplete="off" data-lpignore="true"> 
-      <div class="placeholder2">3.5 <span>INR CPM</span>
-      </div></div>
-         
- 
-      <select class="selectpicker"   data-width='100%'>
-           <option class="special" value="3">upto 3 months</option>
-           <option class="special" value="6" >upto 6 months</option>
-           <option class="special" value="9">upto 9 months</option>
-           <option class="special" value="12">upto 12 months</option>
-           <option class="special" value="15">upto 15 months</option>
-           <option class="special" value="18">upto 18 months</option>
-           <option class="special" value="21">upto 21 months</option>
-           <option class="special" value="24">upto 24 months</option>
-      </select>
-        
-      <div class="input-placeholder3">
-      <input type="text" id="text4" class="change2"  required="" autocomplete="off" data-lpignore="true">
-      <div class="placeholder3">Remarketing + Premarketing with New Geo Targeting
-      </div></div>
-         
-         
-        
-      <div  style="position:relative;top:50px;left:0px;font-size:12px;color:black;z-index:4;font-weight:bold">Optional Offering</div>
-      <div class="l1" style="position:relative;top:55px;left:0px;width:100%;height:0px;border:.5px solid #ccc;z-index:4"></div>
-      <div contenteditable="true"  style="position:relative;z-index:100;top:60px;left:0px;width:100%;height:100%;min-height:150px;line-height:2.5;outline: none;;font-size:12px">
-          
-      </div>
-        
-     
-        
-      <div style="position: relative;top:50px;left:0px;font-size:12px;color:black;z-index:4;font-weight:bold">Pricing also includes</div>
-               
-      <div class="l1" style="position: relative;top:55px;left:0px;width:100%;border:.5px solid #ccc;z-index:4"></div>
-         
-      <div contenteditable="true"  style="position: relative;z-index: 100;top:60px;left:-25px;outline: none;font-size:12px;line-height: 2.3;width:100%;height:100%;min-height:150px">
-       
-          
-      <ol> 
-      <li> 
-      </li> 
-      </ol> 
-      </div>
-       
-       
-       
-      
-               
-      <div style="position:relative;top:60px;left:0px;font-size:12px;color:black;z-index:4;font-weight:bold">Note</div>
-      <div style="position:relative;top:65px;left:0px;width:100%;;border:.5px solid #ccc;z-index:4"></div>
-      <div contenteditable="true"  style="position: relative;z-index: 100;top:70px;left:0px;outline: none;line-height:2.3;font-size:12px;letter-spacing:.3;min-height:150px">
-      </div>
- 
-     
-      <div style="position:relative;top:75px;left:0px;width:100%;height:0px;border:.5px solid #ccc;z-index:4"></div>
-      
-      <div style="position:relative;top:85px;left:0px;font-size:8px;color:black;z-index:4;min-height:74px">This document is strictly private, confidential and personal to its recipients and should not be copied, distributed or reproduced in whole or in part, nor passed to any third party.</div>
-      <br>
- 
-      <button onclick="printpage()" id="print" class='raise' style="position:relative;top:20px;left:43%;font-size:12px;color:black;z-index:4;">PRINT</button>
-      
-      </div>
-      </div>
-      </div>
-      <script>
- // document.designMode = "on";
- function printpage() {
-         //Get the print button and put it into a variable
-         var printButton = document.getElementById("print");
-         //Set the print button visibility to 'hidden' 
-         printButton.style.visibility = 'hidden';
-         //Print the page content
-         window.print()
-         printButton.style.visibility = 'visible';
-     }
- 
- 
- function myFunction() {
+     <!-- <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy" style="position: absolute;;top:5px;left:61%;height:20px;width:135px;outline: none;-webkit-appearance: none;box-shadow: none;border: transparent;background: transparent;">
+       <input class="form-control datepicker" type="text" readonly style="border:transparent;outline:none" />
+       <span class="input-group-addon">
+         <i class="glyphicon glyphicon-calendar"></i>
+     </span>
+   </div> -->
+
+
+   <div class="form-group input-group-sm">
+    <input type="text" class="form-control datepicker" id="date" placeholder="Select date" autocomplete="off" autofill="off" style="position: relative;top:20px;left:82.5%;height:20px;width:135px;outline: none;-webkit-appearance: none;box-shadow: none;border: transparent;background: transparent;color:black;font-weight: bold;">
+  </div>
+                               
+    <div style="text-align:center">
+    <img src="https://s.hcurvecdn.com/hockeycurve.png" style="position:relative;margin-top:-20px;top:0px;width:200px;z-index:4">
+    <div style="position:relative;top:20px;left:0px;font-size:12px;color:black;z-index:4">Scope and Commercials</div> </div>
    
-     
-     document.execCommand("fontSize", 0, '4px');
-     document.execCommand("bold");
    
- 
- }
- </script>
- </body>
+   
+   
+     <div class="row">
+     <div class="column">
+     
+     <!--<div class="input-placeholder">-->
+     <input type="text" id="text1" class="change1"  placeholder="Client"  autocomplete="off" data-lpignore="true"> 
+     <!--</div>-->
+    
+
+     <div class="input-placeholder">
+     <input type="text" id="text2" required=""  autocomplete="off" data-lpignore="true">
+     <div class="placeholder">2 Bn <span>Impressions</span>
+     </div></div>
+           
+     <div class="input-placeholder2">
+     <input type="text" id="text3" required=""  autocomplete="off" data-lpignore="true"> 
+     <div class="placeholder2">3.5 <span>INR CPM</span>
+     </div></div>
+        
+
+     <select class="selectpicker"  id="select"  data-width='100%'>
+          <option class="special" value="3">upto 3 months</option>
+          <option class="special" value="6" >upto 6 months</option>
+          <option class="special" value="9">upto 9 months</option>
+          <option class="special" value="12">upto 12 months</option>
+          <option class="special" value="15">upto 15 months</option>
+          <option class="special" value="18">upto 18 months</option>
+          <option class="special" value="21">upto 21 months</option>
+          <option class="special" value="24">upto 24 months</option>
+     </select>
+       
+     <div class="input-placeholder3">
+     <input type="text" id="text4" class="change2"  required="" autocomplete="off" data-lpignore="true">
+     <div class="placeholder3">Remarketing + Premarketing with New Geo Targeting
+     </div></div>
+        
+        
+       
+     <div  style="position:relative;top:50px;left:0px;font-size:12px;color:black;z-index:4;font-weight:bold">Optional Offering</div>
+     <div class="l1" style="position:relative;top:55px;left:0px;width:100%;height:0px;border:.5px solid #ccc;z-index:4"></div>
+     <div contenteditable="true" id="myText" class="nicEdit-main" style="position:relative;z-index:100;top:60px;left:0px;width:100%;height:100%;min-height:150px;line-height:2.5;outline: none;;font-size:12px">
+         
+     </div>
+       
+    
+       
+     <div style="position: relative;top:50px;left:0px;font-size:12px;color:black;z-index:4;font-weight:bold">Pricing also includes</div>
+              
+     <div class="l1" style="position: relative;top:55px;left:0px;width:100%;border:.5px solid #ccc;z-index:4"></div>
+        
+     <div contenteditable="true" id="myText2" class="nicEdit-main2" style="position: relative;z-index: 100;top:60px;left:-25px;outline: none;font-size:12px;line-height: 2.3;width:100%;height:100%;min-height:150px">
+      
+         
+     <ol> 
+     <li> 
+     </li> 
+     </ol> 
+     </div>
+      
+      
+      
+     
+              
+     <div style="position:relative;top:60px;left:0px;font-size:12px;color:black;z-index:4;font-weight:bold">Note</div>
+     <div style="position:relative;top:65px;left:0px;width:100%;;border:.5px solid #ccc;z-index:4"></div>
+     <div contenteditable="true" id="myText3" class="nicEdit-main3" style="position: relative;z-index: 100;top:70px;left:0px;outline: none;line-height:2.3;font-size:12px;letter-spacing:.3;min-height:150px">
+     </div>
+
+    
+     <div style="position:relative;top:75px;left:0px;width:100%;height:0px;border:.5px solid #ccc;z-index:4"></div>
+     
+     <div style="position:relative;top:85px;left:0px;font-size:8px;color:black;z-index:4;min-height:74px">This document is strictly private, confidential and personal to its recipients and should not be copied, distributed or reproduced in whole or in part, nor passed to any third party.</div>
+     <br>
+
+     <button onclick="printpage()"  id="print" class='raise' style="position:relative;top:20px;left:43%;font-size:12px;color:black;z-index:4;">PRINT</button>
+     
+     </div>
+     </div>
+     </div>
+     <script>
+       window.addEventListener('load', function() {
+      var objecto = document.getElementsByClassName(" nicEdit-main ")[0];
+       var text = document.getElementById('myText');
+       
+    var myData;
+    var postData = window.localStorage.getItem("save");
+    var reset = text.innerHTML;
+    // if no data
+    if (postData == null || postData == '') {
+        myData = text.innerHTML;
+        // store default value
+        window.localStorage.setItem("save", myData);
+        // make it placeholder style
+        text.classList.remove('changed');
+    } else {
+        // if there is a value post it
+        text.innerHTML = postData;
+        // make dark text
+        text.classList.add('changed');
+    }
+    
+      
+      objecto.oninput = function() {
+           myData = text.innerHTML;
+        // local store the value
+        window.localStorage.setItem("save", myData);
+        text.classList.add('changed');
+        
+      }
+    })
+     
+    </script>
+    
+    <script>
+         window.addEventListener('load', function() {
+      var objecto2 = document.getElementsByClassName(" nicEdit-main2 ")[0];
+       var text2 = document.getElementById('myText2');
+       
+    var myData2;
+    var postData2 = window.localStorage.getItem("save2");
+    var reset2 = text2.innerHTML;
+    // if no data
+    if (postData2 == null || postData2 == '') {
+        myData2 = text2.innerHTML;
+        // store default value
+        window.localStorage.setItem("save2", myData2);
+        // make it placeholder style
+        text2.classList.remove('changed2');
+    } else {
+        // if there is a value post it
+        text2.innerHTML = postData2;
+        // make dark text
+        text2.classList.add('changed2');
+    }
+    
+      
+      objecto2.oninput = function() {
+           myData2 = text2.innerHTML;
+        // local store the value
+        window.localStorage.setItem("save2", myData2);
+        text2.classList.add('changed2');
+        
+      }
+    })
+    </script>
+    <script>
+         window.addEventListener('load', function() {
+      var objecto3 = document.getElementsByClassName(" nicEdit-main3 ")[0];
+       var text3 = document.getElementById('myText3');
+       
+    var myData3;
+    var postData3 = window.localStorage.getItem("save3");
+    var reset3 = text3.innerHTML;
+    // if no data
+    if (postData3 == null || postData3 == '') {
+        myData3 = text3.innerHTML;
+        // store default value
+        window.localStorage.setItem("save3", myData3);
+        // make it placeholder style
+        text3.classList.remove('changed3');
+    } else {
+        // if there is a value post it
+        text3.innerHTML = postData3;
+        // make dark text
+        text3.classList.add('changed3');
+    }
+    
+      
+      objecto3.oninput = function() {
+           myData3 = text3.innerHTML;
+        // local store the value
+        window.localStorage.setItem("save3", myData3);
+        text3.classList.add('changed3');
+        
+      }
+    })
+    </script>
+    <script>
+    $(document).ready(function() {
+        $(window).unload(saveSettings);
+        loadSettings();
+      });
+    
+      function loadSettings() {
+        $('#date').val(localStorage.date);
+        $('#text1').val(localStorage.client);
+        $('#text2').val(localStorage.Impressions);
+        $('#text3').val(localStorage.cpm);
+    // 		$('input[value="' + localStorage.gender + '"]').prop('checked', true);
+        $("#select").val(localStorage.months);
+          $("#text4").val(localStorage.remarketing);
+      }
+    
+      function saveSettings() {
+        localStorage.date = $('#date').val();
+        localStorage.client = $('#text1').val();
+        localStorage.Impressions = $('#text2').val();
+        localStorage.cpm = $('#text3').val();
+        localStorage.months = $("#select").val();
+        localStorage.remarketing = $("#text4").val();
+    // 		localStorage.gender = $('input[type=radio]:checked').val();
+      }
+    
+    </script>
+     <script>
+// document.designMode = "on";
+function printpage() {
+        //Get the print button and put it into a variable
+        var printButton = document.getElementById("print");
+        //Set the print button visibility to 'hidden' 
+        printButton.style.visibility = 'hidden';
+        //Print the page content
+        window.print()
+        printButton.style.visibility = 'visible';
+    }
+
+
+function myFunction() {
+  
+    
+    document.execCommand("fontSize", 0, '4px');
+    document.execCommand("bold");
+  
+
+}
+$(document).ready(function() {
+  $(".datepicker").datepicker({
+    
+    format: "dd M, yyyy",
+    
+    todayHighlight: true
+  });
+  
+  $('.today').text(today);
+});
+
+
+function isKeyPressed(event) 
+      {
+      var x = document.getElementById('print');
+        if(event.ctrlKey == 91)
+        {
+          alert("Please Submit exam form befor printing");
+          x.style.visibility= 'hidden';
+        }
+      }
+
+</script>
+</body>
